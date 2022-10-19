@@ -8,15 +8,13 @@
 
 void print_alphabet_x10(void)
 {
+	int count = 0;
 	char le;
-	int c;
 
-	for (c = 0; c <= 9; c++)
+	while (count++ <= 9)
 	{
-		for (le = 'a'; le <= '9'; le++)
-		{
-			_putchar(le);
-		}
+		for (le = 'a'; le <= 'z'; le++)
+			_putchar(le)
 		_putchar('\n');
 	}
 }
