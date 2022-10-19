@@ -17,7 +17,6 @@ void times_table(void)
 			p = (r * c);
 			{
 				_putchar(',');
-				_putchar(' ');
 			}
 			if (p >= 10)
 			{
