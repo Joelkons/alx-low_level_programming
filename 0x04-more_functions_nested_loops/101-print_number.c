@@ -7,32 +7,30 @@
 
 void print_number(int n)
 {
-	long l, r, i, t, e;
+	unsigned int tens, digit, positive = n;
+	double t_beg = 1;
 
-	r = n;
-	e = l = 1;
-
-	if (r < 0)
+	if (n == 0)
+		_putchar('0');
+	else
 	{
-		r *= -1;
-		_putchar('-');
-	}
+		if (n < 0)
+		{
+			positive = n * -1;
+			_putchar('-');
 
-	t = r;
-	while (t >= 10)
-	{
-		l++;
-		t /= 10;
-	}
+		}
 
-	for (i = 1; i < l; i++)
-		e *= 10;
+		while (t_beg <= positive)
+			t_beg *= 10;
+		tens = t_beg / 10;
 
-	while (e > 1)
-	{
-		_putchar((r / e) % 10 + '0');
-		e /= 10;
+		while (tens >= 1)
+		{
+			digit = positive / tens;
+			_putchar(digit + '0');
+			positive = (positive - (tens * digit));
+			tens /= 10;
+		}
 	}
-	_putchar(r % 10 + '0');
 }
-
