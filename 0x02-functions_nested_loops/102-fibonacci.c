@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints the first 50 Fibonacci num.
- * @void: numbers must be separated by comma.
- * return: 0.
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
