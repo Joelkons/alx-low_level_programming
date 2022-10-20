@@ -3,25 +3,35 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: always 0
  */
 
 int main(void)
 {
-	int a;
+	int num;
 
-	for (a = 1; a <= 100; a++)
+	num = 0;
+	while (num < 100)
 	{
-		if (a % 3 == 0 && a % 5 == 0)
-			printf("FazzBuzz");
-		else if (a % 3 == 0)
-			printf("Fazz");
-		else if (a % 5 == 0)
+		num++;
+		if ((num % 3) != 0 && (num % 5) != 0)
+		{
+			printf("%d", num);
+		}
+		else if ((num % 3)  == 0 && (num % 5) != 0)
+		{
+			printf("Fizz");
+		}
+		else if ((num % 3) != 0 && (num % 5) == 0)
+		{
 			printf("Buzz");
+		}
 		else
-			printf("%d", a);
-		if (a != 100)
-			putchar(' ');
+		{
+			printf("FizzBuzz");
+		}
+		if (num < 100)
+			putchar(32);
 	}
 	putchar('\n');
 	return (0);
