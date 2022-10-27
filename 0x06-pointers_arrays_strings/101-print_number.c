@@ -1,8 +1,5 @@
 #include "main.h"
 
-#define ROT13IN  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-#define ROT13OUT "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
-
 /**
  * print_number -  prints an integer.
  * @n: num to be printed
